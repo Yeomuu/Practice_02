@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard';}
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.contain{
+    width: 1275px;
+    color: #141414;
+
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    width: 1500px;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+}
+
+header .logo{
+    width: 70px;
+}
+
+header .menu{
+    display: flex;
+    gap: 4px;
+    align-self: center;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+/* hero section */
+main .hero{
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.ikea.com/images/3f/9e/3f9e1d81f27979daef0974e30264b8aa.jpg?f=sg');
+    background-size: cover;
+    background-position: center;
+
+    font-size: 24px;
+    font-weight: 200;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.hero .text{
+    width: 1468px;
+}
+
+.hero h1{
+    font-size: clamp(24px, 5vw, 80px);
+    font-weight: 800;
+}
+
+.hero iconify-icon{
+    font-size: 50px;
+
+    position: absolute;
+    bottom: 5%;
+
+    animation: scroll ease 0.8s infinite alternate;
+    transition: all ease 1s;
+}
+
+@keyframes scroll{
+    0%{
+        bottom: 5%;
+    }
+    100%{
+        bottom: 5.4%;
+    }
+}
+
+/* 이케아 소개문 */
+.more{
+    width: 1000px;
+}
+
+.more p{
+    font-size: 24px;
+    line-height: 44px;
+
+    margin: 100px 0 72px;
+}
+
+.more button{
+    width: 220px;
+    height: 60px;
+
+    background-color: transparent;
+    border-radius: 5px;
+
+    margin-bottom: 78px;
+}
+
+/* 본문 */
+.brand{
+    background-color: #F2F2F2;
+
+    transition: all ease 0.5s;
+}
+
+.title p{
+    font-size: 20px;
+    color: #9C9C9C;
+
+    padding: 120px 0 8px;
+}
+
+.title h2{
+    font-size: 48px;
+    font-weight: 700;
+
+    margin-bottom: 80px;
+}
+
+/* 갤러리 좌우 배치 */
+.gal{
+    display: flex;
+    align-items: center;
+    gap: 52px;
+
+    margin-bottom: 60px;
+}
+
+.gal .images{
+    width: 725px;
+    height: 492px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.gal .images img{
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    object-position: top;
+
+    transform: scale(1.05);
+    transition: all ease 1s;
+}
+
+.gal .text{
+    width: 500px;
+}
+
+.gal .text .num{
+    font-size: 14px;
+    color: #9C9C9C;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.gal .text .num span{
+    width: 45px;
+    height: 1px;
+    
+    background-color: #9C9C9C;
+
+    display: inline-block;
+}
+
+.gal .text h3{
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 32px;
+}
+
+.gal .text .detail{
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #6d6d6d;
+
+    margin-bottom: 32px;
+}
+
+.gal .text .more{
+    width: 500px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #6d6d6d;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.right .num{
+    justify-content: end;
+}
+
+.gal:nth-child(4){
+    padding-bottom: 120px;
+    margin-bottom: 0;
+}
+
+/* IKEA 이야기 */
+.story{
+    height: 100vh;
+    background-color: #141414;
+
+    overflow: hidden;
+}
+
+.story .contain{
+    display: flex;
+    justify-content: space-between;
+}
+
+.story h2{
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFDB00;
+
+    padding: 120px 0 64px;
+}
+
+.story img{
+    width: 360px;
+    height: 480px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.story .text{
+    width: 850px;
+    height: 100vh;
+    color: #fff;
+
+    overflow: auto;
+    scrollbar-width: none;
+
+    padding: 35vh 0;
+}
+
+.story .text .box{
+    padding: 100px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+
+    opacity: 0.5;
+}
+
+.story .text .box p{
+    width: 470px;
+}
+
+.story .line{
+    width: 38px;
+    height: 4px;
+
+    position: absolute;
+    top: 20%;
+    left: 380px;
+}
+
+.story .Bl{
+    background-color: #0058A3;
+}
+
+.story .Yl{
+    background-color: #FFDB00;
+}
